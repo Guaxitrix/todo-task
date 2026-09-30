@@ -1,0 +1,27 @@
+# Listar Tarefas
+GET http://localhost:3333/api/tasks
+
+###
+# Criar uma tarefa com data limite de termino
+POST http://localhost:3333/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Ir para academia",
+  "dueDate": "2026-09-29"
+}
+
+###
+
+# Marcar como concluída (troque 1 pelo id retornado)
+PATCH http://localhost:3333/api/tasks/1
+Content-Type: application/json
+
+{
+  "completed": true
+}
+
+###
+
+# Excluir
+DELETE http://localhost:3333/api/tasks/1
